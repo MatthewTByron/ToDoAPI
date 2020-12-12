@@ -1,0 +1,31 @@
+﻿@model IEnumerable<TodoAPI_2.Todos.Todo>
+
+@{
+    Layout = "_Layout";
+}
+<h1>Todo List</h1>
+<div>
+    @foreach (var todo in Model)
+    {
+    <div>
+        <form method="delete">
+        @if (todo.IsChecked)
+        {
+            <input type="checkbox" id="@todo.Id" checked name="Item"/>
+        }
+        else
+        {
+            <input type="checkbox" id="@todo.Id" name="Item" />
+        }
+
+        <label for="1">@todo.Content</label>
+        <a class="btn" href ="/Web/@todo.Id">X</a>
+            </form>
+    </div>
+    }
+<form method="post">
+    <input type="text" id="NewText" name="NewText" />
+    <button type="submit">Add Item</button>
+</form>
+
+</div>

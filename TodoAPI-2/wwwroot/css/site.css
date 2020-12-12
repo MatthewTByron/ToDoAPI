@@ -1,0 +1,13 @@
+﻿body {
+    background-color : darkcyan;
+}
+
+.btn {
+    padding:5px 5px 5px 5px;
+    border-style: outset;
+    background-color:goldenrod;
+    color: snow;
+    display: inline-block;
+    text-decoration: none;
+    margin: 3px;
+}
